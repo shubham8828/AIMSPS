@@ -52,6 +52,9 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 // Define routes
 app.use('/api', Routes);
+app.use('/',(req,res)=>{
+    res.status(200).json({server:"Server is running"})
+})
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
