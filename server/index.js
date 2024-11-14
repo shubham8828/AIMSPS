@@ -53,9 +53,11 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 // Define routes
 app.use('/api', Routes);
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
     res.status(200).json({server:"Server is running"})
-  });
+  });  
+
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
