@@ -3,7 +3,7 @@ import './NewInvoices.css';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import { useNavigate } from "react-router-dom";
-import CustomerSearch from "../../Component/customer/searchUserByName";
+import CustomerSearch from "../../Component/customer/searchUserByName.jsx";
 
 const NewInvoices = () => {
   const [to, setTo] = useState("");
