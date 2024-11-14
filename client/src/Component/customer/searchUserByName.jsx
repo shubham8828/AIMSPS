@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import './searchUserByName.css';
+import './searchUserbyName.css';
 
 const CustomerSearch = ({ onSelectCustomer }) => {
   const [query, setQuery] = useState("");
