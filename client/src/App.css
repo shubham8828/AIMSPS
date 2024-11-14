@@ -1,0 +1,21 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+}
+.container{
+    display:flex;
+    width: auto;
+    margin-top: 0px;
+}
+main{
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: rgba(128, 128, 128, 0.411); */
+    background: white;
+}

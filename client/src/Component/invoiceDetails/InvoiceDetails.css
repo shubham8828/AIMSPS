@@ -1,0 +1,194 @@
+
+.invoice-container{
+    width: 70%;
+    min-height: 90%;
+    height: auto;
+    background: white;
+    border-radius: 15px;
+    padding: 0px 20px 0px 20px;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.header-conatainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    margin-left: 20px;
+}
+.header-conatainer img{
+    width: 100px;
+    height: 100px;
+}
+.header-conatainer h1{
+    font-size: 25px;
+    color: rgb(3, 131, 3);
+    margin-top: 20px;
+
+}
+.user-detail-container{
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.userName{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Audiowide", sans-serif;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+.address{
+    margin-top:-10px;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+.contact{
+    margin-top:-15px;
+    font-size: 13px;
+    
+}
+.detail-container{
+    margin-top: 50px;
+}
+.main-detail-container{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.product-table{
+    margin-top: 20px;
+    width: 90%;
+    border-collapse:collapse;
+    background: rgba(156, 199, 156, 0.541);
+    margin: auto;
+}
+th{
+    background:  rgb(22, 128, 22);
+    color: white;
+}
+th,td{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+
+}
+
+.print-btn{
+    border: none;
+    background: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    width: 100px;
+    height: 40px;
+}
+.invoice-main-footer{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content:flex-start;
+    margin-left: 0;
+    padding: 30px;
+    margin-top: 0;
+
+}
+
+.invoice-main-footer p{
+    font-size: 15px;
+}
+.btn-container{
+    width:  100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.customer{
+    text-transform: capitalize;
+}
+.nameCap{
+    text-transform: capitalize;
+}
+
+
+  /* Button Styles */
+  .actions-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    background-color: #004085;
+    transform: scale(1);
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  /* Edit Button */
+  button.edit {
+    background-color: #28a745;
+  }
+  
+  button.edit:hover {
+    background-color: #218838;
+  }
+  
+  /* PDF Button */
+  button.pdf {
+    background-color: #dc3545;
+  }
+  
+  button.pdf:hover {
+    background-color: #c82333;
+  }
+  
+  /* Share Buttons */
+  button.share-email {
+    background-color: #17a2b8;
+  }
+  
+  button.share-email:hover {
+    background-color: #138496;
+  }
+  
+  button.share-whatsapp {
+    background-color: #25d366;
+  }
+  
+  button.share-whatsapp:hover {
+    background-color: #128c7e;
+  }
+  

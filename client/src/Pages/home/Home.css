@@ -1,0 +1,90 @@
+.homeContainer {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    background: url('../../asset/image.png') center no-repeat;
+    background-size: cover;
+}
+
+.homeContainer button {
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    background: cyan;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px cyan, 0px 0px 25px cyan;
+    position: absolute;
+    top: 75vh;
+    left: 65vw;
+}
+
+.homeContainer button:hover {
+    box-shadow: 0px 0px 5px cyan,
+                0px 0px 25px cyan,
+                0px 0px 50px cyan,
+                0px 0px 100px cyan;
+    transition: .5s ease-in-out;
+}
+
+/* Media Queries */
+
+/* For screens up to 1024px */
+@media (max-width: 1024px) {
+    .homeContainer button {
+        font-size: 18px;
+        width: 140px;
+        height: 45px;
+        top: 72vh;
+        left: 60vw;
+    }
+}
+
+/* For screens up to 800px */
+@media (max-width: 800px) {
+    .homeContainer button {
+        font-size: 16px;
+        width: 130px;
+        height: 40px;
+        top: 70vh;
+        left: 55vw;
+    }
+}
+
+/* For screens up to 600px */
+@media (max-width: 600px) {
+    .homeContainer {
+        gap: 10px;
+    }
+    
+    .homeContainer button {
+        font-size: 14px;
+        width: 120px;
+        height: 40px;
+        top: 68vh;
+        left: 50vw;
+    }
+}
+
+/* For screens up to 400px */
+@media (max-width: 400px) {
+    .homeContainer{
+    width: 10%;
+    
+    }
+    .homeContainer button {
+        font-size: 12px;
+        width: 110px;
+        height: 35px;
+        top: 65vh;
+        left: 45vw;
+    }
+}

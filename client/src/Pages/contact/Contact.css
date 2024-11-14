@@ -1,0 +1,105 @@
+/* src/ContactForm.css */
+
+/* Base styles */
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-top: 100px;
+  margin-bottom: 55.6px;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+/* Media Queries */
+
+/* For tablets and smaller screens (up to 768px) */
+@media screen and (max-width: 768px) {
+  .contact-form {
+      width: 80%; /* Reduce width */
+      padding: 15px;
+  }
+
+  .button {
+      font-size: 14px; /* Adjust font size */
+  }
+}
+
+/* For mobile devices (up to 500px) */
+@media screen and (max-width: 500px) {
+  .contact-form {
+      width: 90%; /* Further reduce width */
+      margin-top: 50px;
+      margin-bottom: 30px;
+  }
+
+  .contact-form h2 {
+      font-size: 1.5rem; /* Adjust heading font size */
+  }
+
+  .form-group input,
+  .form-group textarea {
+      padding: 6px; /* Adjust padding */
+  }
+
+  .button {
+      font-size: 14px;
+      padding: 8px; /* Adjust button padding */
+  }
+}
+
+/* For extra small mobile devices (up to 350px) */
+@media screen and (max-width: 350px) {
+  .contact-form h2 {
+      font-size: 1.2rem;
+  }
+
+  .button {
+      font-size: 12px;
+      padding: 6px;
+  }
+}

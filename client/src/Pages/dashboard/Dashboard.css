@@ -1,0 +1,321 @@
+/* Home Container */
+.home-container {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  margin: 0 auto;
+  overflow-y: auto;
+  background-color: #f4f6f9;
+  box-sizing: border-box;
+}
+
+.home-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Home First Row */
+.home-first-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+/* Home Box */
+.home-box {
+  flex: 1;
+  min-width: 250px;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: linear-gradient(135deg, rgba(50, 75, 105, 0.85), rgba(25, 50, 70, 0.85));
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.home-box h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.home-box p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.home-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Home Second Row */
+.home-second-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Chart Box */
+.chart-box {
+  flex: 1;
+  min-width: 100%;
+  max-width: 75%;
+  height: 50vh;
+  background: #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+
+#myChart {
+  width: 100%;
+  height: 100%;
+}
+
+/* Recent Invoice List */
+.recent-invoice-list {
+  width: 100%;
+  background: rgba(45, 50, 55, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.recent-invoice-list div {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.recent-invoice-list div:hover {
+  background: rgba(85, 95, 105, 0.8);
+  transform: translateX(5px);
+}
+
+.recent-invoice-list h3 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: rgba(35, 44, 62, 0.8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* No Invoice Wrapper */
+.no-invoice-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100vh;
+}
+
+.no-invoice-wrapper button {
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+/* Invoice Footer */
+.invoice-footer {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f1f1f1;
+  text-align: center;
+  border-radius: 8px;
+  color: #7f8c8d;
+}
+
+/* Invoice Table */
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f4f6f9;
+  border-radius: 10px;
+}
+
+.invoice-table th,
+.invoice-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  color: #34495e;
+}
+
+.invoice-table th {
+  background-color: #3498db;
+  color: #fff;
+  font-weight: bold;
+}
+
+.invoice-table td {
+  color: #555;
+}
+
+.invoice-table tr:hover {
+  background: rgba(241, 241, 241, 0.8);
+  transform: translateX(5px);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.invoice-table tr:nth-child(even) {
+  background: rgba(245, 245, 245, 0.8);
+}
+
+.invoice-table tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+/* Responsive Design */
+
+/* For screens up to 400px */
+@media screen and (max-width: 400px) {
+  .home-box h1 {
+    font-size: 1.2rem;
+  }
+  
+  .home-box p {
+    font-size: 0.9rem;
+  }
+  
+  .chart-box {
+    height: 40vh;
+          width: 100%; /* Make the table take full width */
+      font-size: 0.9rem; /* Adjust font size for readability */
+    }
+  
+    .invoice-table th, .invoice-table td {
+      padding: 8px; /* Reduce padding for compact layout */
+    }
+  
+    .invoice-table th, .invoice-table td {
+      display: block;
+      width: 100%;
+    }
+  
+    .invoice-table tr {
+      display: block;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for separation */
+    }
+  
+    .invoice-table th {
+      background-color: #3498db;
+      color: #fff;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+
+
+/* For screens up to 500px */
+@media screen and (max-width: 500px) {
+  .home-box h1 {
+    font-size: 1.3rem;
+  }
+  
+  .home-box p {
+    font-size: 0.9rem;
+  }
+
+  .chart-box {
+    height: 45vh;
+  }
+
+  .invoice-table {
+    font-size: 0.85rem;
+  }
+  .home-container{
+    width: 85vw;
+    padding: 0;
+  }
+  .home-box{
+    min-width: 100%;
+  }
+  .invoice-table{
+    width: 100%;
+    font-size: 0.8rem;
+    table-layout: fixed; /* Ensures a consistent width for cells */
+    word-wrap: break-word;
+
+}
+
+/* For screens up to 600px */
+@media screen and (max-width: 600px) {
+  .home-box h1 {
+    font-size: 1.4rem;
+  }
+  
+  .home-box p {
+    font-size: 1rem;
+  }
+
+  .chart-box {
+    height: 50vh;
+  }
+
+  .invoice-table {
+    font-size: 0.9rem;
+
+  }
+}
+
+/* For screens up to 800px */
+@media screen and (max-width: 800px) {
+  .home-box h1 {
+    font-size: 1.5rem;
+  }
+
+  .home-box p {
+    font-size: 1rem;
+  }
+
+  .chart-box {
+    height: 55vh;
+  }
+
+  .invoice-table {
+    font-size: 0.95rem;
+  }
+}
+
+/* For screens up to 1024px */
+@media screen and (max-width: 1024px) {
+  .home-box h1 {
+    font-size: 1.6rem;
+  }
+
+  .home-box p {
+    font-size: 1.05rem;
+  }
+
+  .chart-box {
+    height: 60vh;
+  }
+
+  .invoice-table {
+    font-size: 1rem;
+  }
+}
+}

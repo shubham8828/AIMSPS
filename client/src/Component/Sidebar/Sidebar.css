@@ -1,0 +1,76 @@
+
+.sidebar{
+    background: rgb(16, 35, 41);
+    color: #fff;
+    height:auto ;
+    width: 300px;
+    transition: all 0.5s;
+}
+.top_section{
+    display: flex;
+    align-items:center;
+    padding:20px 15px;
+}.logo {
+    position: absolute; /* Fixes the logo's position within the sidebar */
+    top: -30px; /* Adjust the top distance as needed */
+    left: 20px; /* Adjust the left distance as needed */
+    color: white; /* Logo text color */
+    font-size: 20px; /* Adjust the font size as needed */
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
+.bars{
+    display: flex;
+    font-size: 25px;
+    margin-left: 50px;
+}
+.link{
+    display: flex;
+    color: #fff;
+    padding: 10px 15px;
+    gap: 15px;
+    transition: all 0.5s;
+}
+.link:hover{
+    background:royalblue;
+    color: #000;
+    transition: all 0.5s;
+    border-radius: 20px 0px 0px 20px;
+}
+.active{
+    background:rgb(8, 137, 216);
+    color: #000;
+    border-radius: 20px 0px 0px 20px;
+}
+.icon, .link_text{
+    font-size: 20px;
+}
+
+.logout-main{
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 5px 10px;
+}
+.logout-main:hover{
+    background:royalblue;
+    color: #000;
+    transition: all 0.5s;
+    border-radius: 20px 2px 2px 20px;
+}
+
+.logout-icon{
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.logout{
+    font-size: 20px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background: none;
+    vertical-align: middle;
+}
+.logout:hover{
+    background: none;
+}

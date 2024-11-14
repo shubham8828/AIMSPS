@@ -1,0 +1,140 @@
+/* Team Container for Large Screens */
+.team-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Heading Style */
+h1 {
+  margin: 50px 0;
+  text-align: center;
+  font-size: 2em;
+}
+
+/* Card Styling */
+.card {
+  width: 100%;
+  max-width: 350px; /* Limits card width for smaller screens */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+/* Image Styling */
+.card-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  transition: transform 0.5s ease;
+}
+
+/* Text Styling */
+.card h3 {
+  font-size: 1.2em;
+  margin: 0;
+  color: #333;
+}
+
+.card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Social Icon Styles */
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons .icon {
+  font-size: 1.5em;
+  margin: 0 10px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-icons .icon:hover {
+  color: #0072b1; /* LinkedIn Blue */
+}
+
+/* Hover Effect with Animation */
+.card:hover {
+  background-color: rgb(172, 170, 163);
+  color: #fff;
+  transform: scale(1.05);
+  transition: background-color 0.5s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.card:hover .card-image {
+  transform: scale(1.2);
+}
+
+.card:hover h3,
+.card:hover p {
+  color: #fff;
+}
+
+/* Responsive Design */
+
+/* For screens up to 1024px */
+@media screen and (max-width: 1024px) {
+  .team-container {
+      gap: 20px;
+  }
+  .card {
+      width: 45%;
+      margin-bottom: 30px;
+  }
+}
+
+/* For screens up to 800px */
+@media screen and (max-width: 800px) {
+  .team-container {
+      gap: 15px;
+  }
+  .card {
+      width: 60%;
+  }
+}
+
+/* For screens up to 600px */
+@media screen and (max-width: 600px) {
+  .team-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .card {
+      width: 100%;
+  }
+  h1 {
+      font-size: 1.8em;
+  }
+}
+
+/* For screens up to 400px */
+@media screen and (max-width: 400px) {
+  .card {
+      width: 100%;
+      padding: 15px;
+  }
+  .card h3 {
+      font-size: 1.1em;
+  }
+  .card p {
+      font-size: 0.9em;
+  }
+  .social-icons .icon {
+      font-size: 1.3em;
+  }
+}
