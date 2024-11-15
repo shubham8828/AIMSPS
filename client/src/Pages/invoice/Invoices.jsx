@@ -17,7 +17,7 @@ const Invoices = () => {
   const fetchInvoices = async () => {
     try {
       const email = localStorage.getItem('email');
-      const response = await axios.post('http://localhost:4000/api/invoices', { email });
+      const response = await axios.post('https://aimsps-server.vercel.app/api/invoices', { email });
       const fetchedInvoices = response.data.invoices;
       
       // Sort invoices in LIFO order (most recent first)
@@ -37,7 +37,7 @@ const Invoices = () => {
   // Handle invoice deletion
   const deleteInvoice = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/api/delete/${id}`)
+      await axios.delete(`https://aimsps-server.vercel.app/api/delete/${id}`)
         .then((res) => {
           toast.success(res.data.msg, { position: 'top-center' });
           setAllInvoices(allInvoices.filter(invoice => invoice._id !== id));
