@@ -4,9 +4,9 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 
 import Routes from './routes/Routes.js';
-// import qrcode from 'qrcode-terminal';
-// import pkg from 'whatsapp-web.js';
-// const { Client, LocalAuth } = pkg;
+import qrcode from 'qrcode-terminal';
+import pkg from 'whatsapp-web.js';
+const { Client, LocalAuth } = pkg;
 
 dotenv.config();
 const app = express();
@@ -68,3 +68,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+  
