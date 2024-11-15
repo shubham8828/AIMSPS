@@ -24,7 +24,7 @@ const Setting = () => {
     // Fetch user data
     const fetchUserData = async () => {
       try {
-        const res = await axios.post('http://localhost:4000/api/user', { email });
+        const res = await axios.post('https://aimsps-server.vercel.app/api/user', { email });
         setUser(res.data.user);
         setFormData(res.data.user);
       } catch (error) {
@@ -61,7 +61,7 @@ const Setting = () => {
     e.preventDefault();
     setLoading(true)
     try {
-      const res = await axios.put('http://localhost:4000/api/update', formData);
+      const res = await axios.put("https://aimsps-server.vercel.app/api/update', formData);
       localStorage.setItem('email',res.data.user.email)
       localStorage.setItem('image',res.data.user.image)
       setLoading(false)
