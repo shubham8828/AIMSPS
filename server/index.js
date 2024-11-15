@@ -16,7 +16,7 @@ app.use(cors(
 ));
 app.use(express.json());
 
-mongoose.connect(process.env.URL)
+mongoose.connect('mongodb+srv://skv6621:skv6621@cluster0.618s2.mongodb.net/TYIT-PROJECT?retryWrites=true&w=majority&appName=Cluster0')
     .then(() => {
         console.log('Connected to MongoDB');
         console.log(process.env.URL)
