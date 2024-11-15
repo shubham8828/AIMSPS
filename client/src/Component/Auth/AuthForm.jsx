@@ -55,7 +55,7 @@ const AuthForm = ({ setToken }) => {
         const { email, password } = formData;
 
         await axios
-          .post("http://localhost:4000/api/login", { email, password })
+          .post("https://aimsps-nfqq.vercel.app/api/login", { email, password })
           .then((res) => {
             localStorage.setItem('email', res.data.user.email);
             localStorage.setItem('token', res.data.token);
@@ -79,7 +79,7 @@ const AuthForm = ({ setToken }) => {
 
         // Send data to the server
         await axios
-          .post("http://localhost:4000/api/register", formData)
+          .post("https://aimsps-nfqq.vercel.app/api/register", formData)
           .then((res) => {
             localStorage.setItem('email', res.data.user.email);
             localStorage.setItem('token', res.data.token);
