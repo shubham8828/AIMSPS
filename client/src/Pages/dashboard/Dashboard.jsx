@@ -14,7 +14,7 @@ const Dashboard = () => {
   // Fetch invoice data
   const getData = async () => {
     try {
-      const response = await axios.post("http://localhost:4000/api/invoices", {
+      const response = await axios.post("https://aimsps-server.vercel.app/api/invoices", {
         email: localStorage.getItem("email"),
       });
       setInvoices(response.data.invoices);
