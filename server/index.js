@@ -10,7 +10,13 @@ const { Client, LocalAuth } = pkg;
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://aimsps.vercel.app/","http://localhost:5173/"],
+        methods: ["POST", "GET","PUT","DELETE"],
+        credentials: true
+    }
+));
 app.use(express.json());
 
 mongoose.connect(process.env.URL)
