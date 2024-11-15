@@ -7,19 +7,18 @@ import Routes from './routes/Routes.js';
 
 dotenv.config();
 const app = express();
-
-app.use(cors({
-    origin: ["https://aimsps.vercel.app/", "http://localhost:5173/"],
-    methods: ["POST", "GET", "PUT", "DELETE"],
-    credentials: true
-}));
+app.use(cors(
+    {
+        origin: ["https://aimsps.vercel.app/","http://localhost:5173/"],
+        methods: ["POST", "GET","PUT","DELETE"],
+        credentials: true
+    }
+));
 app.use(express.json());
 
-mongoose.connect(process.env.URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.URL)
     .then(() => {
         console.log('Connected to MongoDB');
-        console.log("MongoDB URI:", process.env.URL); // This should log the MongoDB connection string
-
     })
     .catch((error) => {
         console.error('MongoDB connection error:', error);
@@ -33,10 +32,12 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use('/api', Routes);
 
 app.get('/', (req, res) => {
-    res.status(200).json({ server: "Server is running" });
-});
+    res.status(200).json({server:"Server is running"})
+  });  
 
-const PORT = process.env.PORT || 4000;
+
+const PORT = process.env.PORT||4000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+  
