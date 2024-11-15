@@ -66,7 +66,7 @@ const NewInvoices = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:4000/api/create', formData);
+      const response = await axios.post('https://aimsps-server.vercel.app/api/create', formData);
       toast.success(response.data.msg, { position: 'top-center' });
 
       // Clear the form after successful submission
