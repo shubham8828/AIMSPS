@@ -5,10 +5,6 @@ import bcrypt from "bcrypt"; // To hash the password
 import jwt from "jsonwebtoken"; // To generate JWT tokens
 import cloudinary from "../cloudinary.js";
 
-// import qrcode from 'qrcode-terminal'; // for creating QR code for signUp your whatshap
-// import pkg from 'whatsapp-web.js';
-// const { Client, LocalAuth } = pkg;
-
 export const newInvoive = async (req, res) => {
   try {
     // Extract bill data from the request body
@@ -209,8 +205,7 @@ export const register = async (req, res) => {
 
     // Generate JWT token
     const token = jwt.sign(
-      { id: newUser._id, email: newUser.email },
-      process.env.JWT_SECRET // Use your secret key for signing the token
+      { id: newUser._id, email: newUser.email },'6d60b74d3a1f4e8f9b1a8b3d6c1e2f3b4a5c6d7e8f9g0h1i2j3k4l5m6n7o8p9q' // Use your secret key for signing the token
     );
 
     // Send response with token and user data

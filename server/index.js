@@ -19,7 +19,7 @@ app.use(cors(
 ));
 app.use(express.json());
 
-mongoose.connect(process.env.URL)
+mongoose.connect("mongodb+srv://skv6621:skv6621@cluster0.618s2.mongodb.net/TYIT-PROJECT?retryWrites=true&w=majority&appName=Cluster0")
     .then(() => {
         console.log('Connected to MongoDB');
     })
@@ -64,7 +64,7 @@ app.get('/', (req, res) => {
   });  
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = 4000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
