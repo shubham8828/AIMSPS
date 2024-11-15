@@ -26,7 +26,9 @@
     top: 75vh;
     left: 65vw;
 }
-
+.billing{
+    width: 100vw;
+}
 .homeContainer button:hover {
     box-shadow: 0px 0px 5px cyan,
                 0px 0px 25px cyan,
@@ -77,7 +79,7 @@
 /* For screens up to 400px */
 @media (max-width: 400px) {
     .homeContainer{
-    width: 90%;
+    width: 100%;
     
     }
     .homeContainer button {
